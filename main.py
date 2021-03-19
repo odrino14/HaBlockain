@@ -12,12 +12,6 @@ execute the Implementation.
 
 # create a Transaction with parameter
 
-def createTransaction():
-    sender = input("Sender : ")
-    receiver = input("Receiver: ")
-    amount = int(input("Amount: "))
-    return sender
-
 
 if __name__ == '__main__':
     master = Master(name="Master")

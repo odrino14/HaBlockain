@@ -20,9 +20,6 @@ class StartWorker(Thread):
         self.target = target
         self.name = name
         self.__blockchain = Blockchain()
-        # self.IsRunning = True  # Worker is Running set to True
-
-        # self.__runningCondition = Condition(Lock())  # waiting notification from Master for restart
         return
 
     def isRunning(self):
@@ -54,7 +51,7 @@ class StartWorker(Thread):
         self.__paused = True
         print(f"{self.name} ist ausgefallen.\n")
 
-    # restart the stoping Workers to join the execution process
+    # restart the stopping Workers to join the execution process
     def resume(self):
         self.__paused = False
         print(f"{self.name} ist nun wieder funktionsfähig\n")
